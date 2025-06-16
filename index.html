@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeLux - Магазин премиальных часов</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-clock"></i>
+                    <span>TimeLux</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Главная</a></li>
+                        <li><a href="#catalog"><i class="fas fa-list"></i> Каталог</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> О нас</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button id="login-btn"><i class="fas fa-sign-in-alt"></i> Войти</button>
+                    <button id="register-btn" class="primary"><i class="fas fa-user-plus"></i> Регистрация</button>
+                    <button id="cart-btn"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Эксклюзивные часы премиум-класса</h1>
+                <p>Откройте для себя коллекцию самых престижных часовых брендов мира. Точность, элегантность и статус в каждой детали.</p>
+                <a href="#catalog" class="btn">В каталог</a>
+                <a href="#about" class="btn btn-outline">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наш каталог</h2>
+            </div>
+            <div class="products" id="products-container">
+                <!-- Товары будут загружены через JavaScript -->
+            </div>
+            <div class="pagination" id="pagination">
+                <!-- Пагинация будет загружена через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>О нашем магазине</h2>
+            </div>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--primary);">Наша история</h3>
+                        <p style="margin-bottom: 1rem;">TimeLux был основан в 2010 году как небольшой бутик эксклюзивных часов в Москве. За прошедшие годы мы выросли в ведущий российский ритейлер премиальных часовых брендов.</p>
+                        <p style="margin-bottom: 1rem;">Наша миссия - предоставлять клиентам не просто часы, а произведения часового искусства, которые становятся семейными реликвиями.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--primary);">Почему выбирают нас</h3>
+                        <ul style="list-style-type: none;">
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px; margin-top: 3px;"></i>
+                                <span>Официальный дилер 20+ премиальных брендов</span>
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px; margin-top: 3px;"></i>
+                                <span>Собственный сервисный центр с мастерами из Швейцарии</span>
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px; margin-top: 3px;"></i>
+                                <span>Гарантия подлинности всех товаров</span>
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px; margin-top: 3px;"></i>
+                                <span>Эксклюзивные модели, которых нет в других магазинах</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary); text-align: center;">Наши ценности</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="width: 80px; height: 80px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--secondary); font-size: 1.8rem;">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--primary);">Качество</h4>
+                            <p>Мы предлагаем только сертифицированные часы от официальных производителей</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 80px; height: 80px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--secondary); font-size: 1.8rem;">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--primary);">Экспертиза</h4>
+                            <p>Наши консультанты помогут подобрать идеальные часы под ваш стиль и потребности</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 80px; height: 80px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--secondary); font-size: 1.8rem;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--primary);">Надежность</h4>
+                            <p>Гарантия до 5 лет и пожизненное обслуживание в нашем сервисном центре</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 80px; height: 80px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--secondary); font-size: 1.8rem;">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 style="margin-bottom: 0.5rem; color: var(--primary);">Страсть</h4>
+                            <p>Мы разделяем вашу любовь к часовому искусству и готовы делиться знаниями</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Свяжитесь с нами</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div>
+                    <h3 style="margin-bottom: 1rem; color: var(--primary);">Контактная информация</h3>
+                    <p style="margin-bottom: 1rem;"><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary);"></i> Москва, ул. Тверская, 18</p>
+                    <p style="margin-bottom: 1rem;"><i class="fas fa-phone" style="margin-right: 10px; color: var(--secondary);"></i> +7 (495) 123-45-67</p>
+                    <p style="margin-bottom: 1rem;"><i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary);"></i> info@timelux.ru</p>
+                    <p style="margin-bottom: 1rem;"><i class="fas fa-clock" style="margin-right: 10px; color: var(--secondary);"></i> Ежедневно с 10:00 до 22:00</p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1rem; color: var(--primary);">Бутики</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Москва:</strong> ТЦ "Часовой квартал", 3 этаж</p>
+                    <p style="margin-bottom: 1rem;"><strong>Санкт-Петербург:</strong> Невский пр., 45</p>
+                    <p style="margin-bottom: 1rem;"><strong>Сочи:</strong> ТРЦ "Галерея", 2 этаж</p>
+                    <p style="margin-bottom: 1rem;"><strong>Екатеринбург:</strong> ТЦ "Гринвич", 1 этаж</p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1rem; color: var(--primary);">Онлайн-консультант</h3>
+                    <p style="margin-bottom: 1rem;">Наши эксперты готовы ответить на все ваши вопросы в онлайн-чате или по видеосвязи.</p>
+                    <button class="btn" style="margin-right: 1rem;"><i class="fas fa-comment-dots"></i> Чат</button>
+                    <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);"><i class="fas fa-video"></i> Видеоконсультация</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TimeLux</h3>
+                    <p>Эксклюзивные часы для тех, кто ценит качество и статус.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-rutube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li> 
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Подписка</h3>
+                    <p>Подпишитесь на наши новости и получите скидку 10% на первый заказ.</p>
+                    <form style="margin-top: 1rem; display: flex;">
+                        <input type="email" placeholder="Ваш email" style="flex: 1; padding: 0.5rem; border: none; border-radius: 5px 0 0 5px;">
+                        <button type="submit" style="background: var(--secondary); color: white; border: none; padding: 0 1rem; border-radius: 0 5px 5px 0; cursor: pointer;">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TimeLux. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Вход в аккаунт</h3>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Войти</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Нет аккаунта? <a href="#" id="show-register" style="color: var(--secondary);">Зарегистрируйтесь</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Регистрация</h3>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Имя</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Пароль</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Подтвердите пароль</label>
+                    <input type="password" id="register-confirm" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Зарегистрироваться</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Уже есть аккаунт? <a href="#" id="show-login" style="color: var(--secondary);">Войдите</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="cart-modal">
+        <div class="modal-content cart-modal">
+            <span class="close-modal">&times;</span>
+            <h3>Ваша корзина</h3>
+            <div class="cart-items" id="cart-items">
+                <!-- Товары в корзине будут загружены через JavaScript -->
+                <p style="text-align: center;">Ваша корзина пуста</p>
+            </div>
+            <div class="cart-total">
+                <h3>Итого:</h3>
+                <div class="cart-total-price">0 ₽</div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);" id="close-cart">Продолжить покупки</button>
+                <button class="btn" id="checkout">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="profile-modal">
+        <div class="modal-content profile-modal">
+            <span class="close-modal">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar" id="profile-avatar">
+                    <!-- Аватар будет загружен через JavaScript -->
+                </div>
+                <div class="profile-info">
+                    <h3 id="profile-name">Имя пользователя</h3>
+                    <p id="profile-email">user@example.com</p>
+                </div>
+            </div>
+            <div class="profile-details">
+                <h4>Личная информация</h4>
+                <ul>
+                    <li><strong>Дата регистрации:</strong> <span id="profile-reg-date">01.01.2025</span></li>
+                    <li><strong>Телефон:</strong> <span id="profile-phone">+7 (XXX) XXX-XX-XX</span></li>
+                    <li><strong>Адрес:</strong> <span id="profile-address">Не указан</span></li>
+                    <li><strong>Количество заказов:</strong> <span id="profile-orders">0</span></li>
+                </ul>
+            </div>
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+                <button class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);" id="edit-profile">Редактировать профиль</button>
+                <button class="btn" id="logout" style="background: var(--accent);">Выйти</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="product-details-modal">
+        <div class="modal-content product-details-modal">
+            <span class="close-modal">&times;</span>
+            <div class="product-details" id="product-details">
+                <!-- Детали товара будут загружены через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
